@@ -13,6 +13,8 @@ a {
 }
 body {
   background: black;
+  width: 100vw;
+  height: auto;
 }
 
 header {
@@ -25,8 +27,8 @@ header {
 }
 
 main {
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: 100%;
   background: url(img/blur-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -285,15 +287,9 @@ input {
   #blurLeft {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
   }
   #blurRight {
     display: block;
     position: absolute;
-    bottom: -11%;
-    left: 0;
-    width: 793px;
-    height: 572px;
   }
 }
