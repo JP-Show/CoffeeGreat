@@ -291,7 +291,7 @@ input {
   #blurRight {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -11%;
     left: 0;
     width: 793px;
     height: 572px;
