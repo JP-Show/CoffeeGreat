@@ -84,6 +84,7 @@ input {
   display: flex;
   justify-content: center;
   width: 100vw;
+  z-index: 1;
 }
 #coffeRocket img {
   display: flex;
@@ -109,13 +110,14 @@ input {
   justify-content: left;
   left: 0;
   margin-top: 69px;
+  z-index: 2;
 }
 #menuNavOpen ul {
   list-style: none;
 }
 #menuNavOpen ul li a {
   display: flex;
-  padding: 17px 0;
+  padding: 17px 30px;
   width: 100vw;
   border: 0px solid;
   border-bottom: 1px solid gray;
@@ -124,7 +126,7 @@ input {
 #menuNavOpen ul li a:hover {
   color: var(--colorPurble);
   display: flex;
-  padding: 17px 0;
+  padding: 17px 30px;
   width: 100vw;
   border: 0px solid;
   border-bottom: 1px solid gray;
@@ -199,6 +201,7 @@ input {
     justify-content: none;
     left: none;
     margin-top: 69px;
+    z-index: 5;
   }
   #menuNavOpen ul li a {
     display: flex;
