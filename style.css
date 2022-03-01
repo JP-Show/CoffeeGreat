@@ -1,0 +1,299 @@
+/* BASE */
+:root {
+  --colorPurble: hsl(258, 73%, 62%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font: 700 18px 'manrope', sans-serif;
+}
+body {
+  background: black;
+}
+
+header {
+  height: 95.5px;
+  width: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 1px 3px gray;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background: url(img/blur-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 812px;
+}
+
+nav {
+  margin: 0 26px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  margin: 88px 28px;
+  color: white;
+  font: 600 30px 'Manrope', sans-serif;
+  text-align: center;
+}
+h1 {
+  margin: 0px 28px;
+  color: white;
+  font: 700 30px 'Manrope', sans-serif;
+  text-align: center;
+}
+input {
+  color: white;
+  font: 800 11px 'manrope', sans-serif;
+  background-color: transparent;
+  padding: 10px 30px;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: var(--colorPurble);
+}
+#inputMenu {
+  display: none;
+}
+#logoNav {
+  background-image: url(img/logo-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 200px;
+}
+#coffeRocket {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+#coffeRocket img {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+#textMid {
+  margin-top: 88px;
+  margin-bottom: -30px;
+}
+
+/* MENU */
+
+#menuNavOpen {
+  margin: 0;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: absolute;
+  justify-content: left;
+  left: 0;
+  margin-top: 69px;
+}
+#menuNavOpen ul {
+  list-style: none;
+}
+#menuNavOpen ul li a {
+  display: flex;
+  padding: 17px 0;
+  width: 100vw;
+  border: 0px solid;
+  border-bottom: 1px solid gray;
+}
+
+#menuNavOpen ul li a:hover {
+  color: var(--colorPurble);
+  display: flex;
+  padding: 17px 0;
+  width: 100vw;
+  border: 0px solid;
+  border-bottom: 1px solid gray;
+  border-left: 5px solid var(--colorPurble);
+}
+
+#menuNavOpen.active {
+  display: flex;
+}
+#menuNav {
+  display: flex;
+  position: relative;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  background-image: url(img/menu-buguer-open.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#menuNav.active {
+  background-image: url(img/menu-buguer-close.svg);
+  transition: 0.5s;
+}
+#blurLeft {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#blurRight {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/* classes */
+.textDecor {
+  color: black;
+  text-shadow: 0px 0px 2px var(--colorPurble), 0px 0px 2px var(--colorPurble),
+    0px 0px 2px var(--colorPurble);
+}
+
+/* Resposividade */
+
+@media (min-width: 560px) {
+  nav {
+    margin: 0 26px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  header {
+    box-shadow: none;
+  }
+
+  #imageRocket {
+    width: 100vw;
+    height: auto;
+  }
+
+  #menuNav {
+    display: none;
+  }
+  #menuNavOpen {
+    margin: 0;
+    background: none;
+    width: none;
+    height: none;
+    display: block;
+    position: absolute;
+    justify-content: none;
+    left: none;
+    margin-top: 69px;
+  }
+  #menuNavOpen ul li a {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    border: none;
+    border-bottom: none;
+  }
+  #menuNavOpen ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  #menuNavOpen ul li a:hover {
+    color: var(--colorPurble);
+    display: flex;
+    padding: 10px;
+    width: auto;
+    border: none;
+    border-bottom: none;
+    border-left: none;
+  }
+}
+
+@media (min-width: 760px) {
+  section h2 {
+    display: none;
+  }
+  input {
+    margin-top: 150px;
+    font-size: large;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  #textMid {
+    margin-bottom: 30px;
+  }
+  #coffeRocket img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 940px) {
+  #logoNav {
+    background-image: url(img/logo-desktop.svg);
+    width: 100px;
+    height: 60px;
+  }
+
+  #menuNavOpen {
+    margin-top: 0;
+    position: relative;
+    display: flex;
+    height: 10px;
+    justify-content: center;
+  }
+  #logoNav {
+    align-items: none;
+  }
+  header {
+    justify-content: center;
+  }
+  nav {
+    width: 900px;
+    justify-content: space-evenly;
+    margin: 0;
+  }
+  #inputMid {
+    display: none;
+  }
+  #inputMenu {
+    display: flex;
+  }
+  input {
+    margin-top: 0;
+  }
+  #coffeRocket img {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    background: url(#);
+  }
+  #blurLeft {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #blurRight {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 793px;
+    height: 572px;
+  }
+}
